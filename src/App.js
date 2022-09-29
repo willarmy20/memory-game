@@ -51,8 +51,8 @@ class MemoryGame extends React.Component {
 
     let newPickedCards = this.state.pickedCards.concat(cardIndex);
     if (newPickedCards.length === 2) {
-      let card1Index = newPickedCards[0];
-      let card2Index = newPickedCards[1];
+      const card1Index = newPickedCards[0];
+      const card2Index = newPickedCards[1];
       if (newDeck[card1Index].symbol !== newDeck[card2Index].symbol) {
         setTimeout(() => {
           this.unflipCards(card1Index, card2Index);
